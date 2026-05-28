@@ -1,20 +1,14 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
+import Effect from "./Effect"
+import Effect2 from "./Effect2"
 
 export default function App(){
-  const [counter,setCounter] = useState(0)
+
+  useEffect(()=>{
+    console.log("effect from app component")
+  })
   return <>
-    <h1>{counter}</h1>
-    <button onClick={()=>{setCounter(counter+1)}}>Add</button>
-    <button onClick={()=>{setCounter(counter-1)}}>Subtract</button>
-    <button onClick={()=>{setCounter(0)}}>Reset</button>
-  </>
-}
-
-export default function App(){
-  const [on,off] = useState(on)
-  return<>
-    <h1>on</h1>
-    <button on onClick={}
-  
+    <Effect/>
+    <Effect2/>
   </>
 }
