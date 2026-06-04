@@ -1,8 +1,13 @@
-import NavBar from "../components/NavBar";
+import { useNavigate } from "react-router-dom"
 
 export default function Home(){
+    const navigate = useNavigate()
+
+    function handelLogin(){
+        navigate('/courses')
+    }
     return<>
     <h1>Home page!</h1>
-    <NavBar/>
+    <button onClick={()=>handelLogin()}>Login</button>
     </>
 }
